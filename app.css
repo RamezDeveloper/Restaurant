@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-rows: 80vh repeat(5, max-content);
+    grid-template-columns: repeat(6, 1fr);
+}
+.header{
+    background-color: #000000;
+    grid-column: 1/-1;
+    background-image: linear-gradient(to right, #8d8d8d00, #000000),url(./images/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    grid-gap: 20px;
+ justify-content: center;
+    align-content: center;
+text-align: center;
+
+}
+
+@media screen and (max-width:989px) {
+    .header{
+        background-position-x: 10%;
+    }
+}
+
+
+
+.story{
+    background-color: rgb(255, 255, 255);
+    grid-column: 1/-1;
+}
+.service{
+
+grid-column: 2/6;
+}
+.reserve{
+
+grid-column: 1/-1;
+}
+.gallery{
+
+grid-column: 1/-1;
+}
+.footer{
+margin: 1rem 0;
+border-top: 1px solid black;
+background-color: rgb(247, 247, 247);
+grid-column: 1/-1;
+}
+
+.header1{
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+justify-self: center;
+    
+}
+.header2{
+    color: white;
+    font-family: sans-serif;
+    justify-self: center;
+
+}
+.header_text{
+    color: orange;
+    font-weight: 800;
+    font-size: 40px;
+}
+.header_btn{
+    padding: 15px 30px;
+    border-radius: 10px;
+    color: white;
+    background-color: orange;
+    font-size: 14px;
+    font-family: sans-serif;
+    border: 1px solid orange;
+    cursor: pointer;
+ transition: 0.5s ease-in-out;
+ justify-self: center;
+}
+.header_btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: orange;
+}
+.story_images{
+    display: grid;
+   grid-gap: 10px;
+   padding: 20px;
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.image{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+@media screen and (max-width: 685px) {
+    .image-4{
+       grid-column: 2/3;
+    }
+}
+@media screen and (max-width: 475px) {
+    .image-4{
+       grid-column: auto;
+    }
+}
+
+
+.section_title{
+    text-align: center;
+    padding: 25px;
+    font-size: 30px;
+    color: orange;
+}
+
+
+
+.section_title:before, 
+.section_title:after{
+background-color: black;
+content: "";
+display: inline-block;
+vertical-align: middle;
+position: relative;
+height: 2px;
+border-radius: 5px;
+width: 5%;
+
+}
+
+
+.section_title:before{
+    right: 1rem;
+    margin-left: -50%;
+}
+.section_title:after{
+    left: 1rem;
+    margin-right: -50%;
+}
+
+.service_image{
+    width: 100%;
+    height: 250px;
+border-top-right-radius: 50px;
+border-bottom-left-radius: 50px;
+cursor: pointer;
+transition: 0.5s ease-in-out;
+}
+.service_image:hover{
+    content: "";
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 220px;
+   
+    
+}
+
+
+.services_section{
+    display: grid;
+    grid-template-rows: repeat(2, 250px);
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-gap: 50px;
+    grid-row-gap: 70px;
+    padding-bottom: 70px;
+}
+.service_text{
+    font-size: 19px;
+   text-align: center;
+}
+.text{
+    font-size: 14px;
+    color: orange;
+    font-weight: 900;
+}
+
+
+
+.leftbox_img{
+    width: 100%;
+    height: 120px;
+    clip-path: circle(40% at 50% 50%);
+    width: 50%;
+    margin: 0 auto;
+
+}
+.reserve_section{
+    display: grid;
+    grid-template-columns: 50px repeat(4, 1fr) 50px;
+    grid-template-rows: repeat(1fr);
+    padding: 55px;
+    text-align: center;
+    background-image: linear-gradient(to right, #8d8d8d00, #000000),url(./images/pexels-asad-photo-maldives-1449773.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 380px;
+    
+}
+.right{
+    background-color: #0000006b;
+    color: white;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 2fr 1fr  repeat(3, 0.5fr) 2fr;
+   padding: 20px
+  
+
+   
+}
+.left{
+    background-color: rgba(255, 255, 255, 0.301);
+   max-height: 280px;
+    grid-column: 3/6;
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 0.5fr 1fr 2fr ;
+    padding: 10px;
+    
+}
+.leftbox{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.left_title, 
+.parants,
+.reserve_branch{
+color: goldenrod; 
+font-family: 'Courier New', Courier, monospace;
+}
+.order_text{
+    align-self: center;
+    font-family: 'Courier New', Courier, monospace;
+    color:orangered;
+    font-size: 14px;
+}
+.section_gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 280px);
+    padding: 20px 50px;
+    gap: 1rem;
+    grid-template-areas: "gallery_1 gallery_1 gallery_2" "gallery_3 gallery_4 gallery_2" "gallery_3 gallery_5 gallery_5" ;
+
+}
+.section_titles{
+    text-align: center;
+    padding: 25px;
+    font-size: 30px;
+    color: orange;
+}
+
+.section_titles:before, 
+.section_titles:after{
+background-color: black;
+content: "";
+display: inline-block;
+vertical-align: middle;
+position: relative;
+height: 1px;
+border-radius: 5px;
+width: 5%;
+
+}
+
+
+.gallery1{
+    grid-area:gallery_1;
+    background-image: url("./images/Gallery/pexels-burak-the-weekender-735869.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.gallery2{
+    grid-area: gallery_2;
+    background-image: url("./images/Gallery/pexels-engin-akyurt-2673353.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.gallery3{
+    grid-area: gallery_3;
+    background-image: url("./images/Gallery/pexels-paul-h-17199116.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.gallery4{
+    grid-area: gallery_4;
+    background-image: url("./images/Gallery/pexels-suzukii-xingfu-698308.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.gallery5{
+    grid-area: gallery_5;
+    background-image: url("./images/Gallery/pexels-pixabay-262973.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.image-gallery{
+    width: 100%;
+    border-radius: 15px;
+background-repeat: no-repeat;
+
+}
+
+.footer_section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    text-align: center;
+    grid-gap: 7px;
+    padding: 25px;
+}
+
+ul{
+    list-style: none;
+}
+li{
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.5s ease-in-out;
+}
+.copy{
+    text-align: center;
+    font-size: 12px;
+    padding: 3rem 0;
+}
+.copy_title{
+    color: orange;
+}
+.footer_title{
+    color: orange;
+}
+
+
+li:hover{
+    color: orange;
+}
+
+.telegram{
+    transition: 0.2s ease-in-out;
+}
+.whatsapp{
+    transition: 0.2s ease-in-out;
+}
+.youtube{
+    transition: 0.2s ease-in-out;
+}
+.telegram:hover{
+    color: rgb(68, 68, 255);
+}
+
+.whatsapp:hover{
+    color: rgb(43, 255, 43);
+}
+
+.youtube:hover{
+    color: red;
+}
